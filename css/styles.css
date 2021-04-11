@@ -117,7 +117,6 @@ html.view-side .view-side {
   transition-delay: 0.4s;
 }
 
-/*
 .controls {
   background-color: #272930;
   color: #FFF;
@@ -130,7 +129,8 @@ html.view-side .view-side {
   color: #989AA4;
   border-radius: 0.2em 0.2em 0 0;
 }
-.controls h2:after {
+
+/*.controls h2:after {
   content: ":";
 }
 .controls a {
