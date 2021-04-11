@@ -221,7 +221,6 @@ html.view-side .base {
   position: relative;
 }
 
-/*
 .wall {
   background-color: #C81415;
   height: 100%;
@@ -231,6 +230,7 @@ html.view-side .base {
   top: 0;
 }
 
+/*
 .wall--1 {
   background-color: #000;
   transform-origin: 0 0;
