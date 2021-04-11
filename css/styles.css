@@ -368,11 +368,11 @@ html.view-side .base {
   transform: skewY(20deg) translateX(30%);
 }
 
-/*.wheel--1 {
+.wheel--1 {
   margin: 100% 0 345%;
 }
 
-#contact h1 {
+/*#contact h1 {
   font-family: helvetica;
   font-weight: normal;
   text-align: center;
