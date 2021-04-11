@@ -158,5 +158,5 @@ var navigate = (function() {
     camera: camera
   }
 })();
-/*
-                          drive.init("car");
+
+drive.init("car");
