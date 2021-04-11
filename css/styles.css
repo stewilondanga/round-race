@@ -268,11 +268,11 @@ html.view-side .base {
   float: left;
 }
 
-/*.tail-light + .tail-light {
+.tail-light+.tail-light {
   float: right;
 }
 
-.head-light {
+/*.head-light {
   border-radius: 50%;
   background-color: #FFF;
   height: 100%;
