@@ -80,83 +80,83 @@ var navigate = (function() {
           state.car.turn -= 0.4;
         }
       }
+
+      state.car.speed *= state.car.model.friction;
+
+      if (state.car.speed < 0.1 && state.car.speed > -0.1) {
+        state.car.speed = 0;
+      }
       /*
-                                            state.car.speed *= state.car.model.friction;
+                                                  if(state.car.speed != 0 && state.car.turn != 0) {
+                                                    state.car.dir += state.car.turn * (state.car.speed / state.car.model.maxSpeed);
+                                                    state.car.turn *= 0.7
 
-                                            if(state.car.speed < 0.1 && state.car.speed > -0.1) {
-                                              state.car.speed = 0;
-                                            }
+                                                    if(state.car.dir < 0) {
+                                                      state.car.dir = (360 - state.car.dir);
+                                                    } else if (state.car.dir > 360) {
+                                                      state.car.dir = 360 - state.car.dir;
+                                                    }
+                                                  }
 
-                                            if(state.car.speed != 0 && state.car.turn != 0) {
-                                              state.car.dir += state.car.turn * (state.car.speed / state.car.model.maxSpeed);
-                                              state.car.turn *= 0.7
+                                                  if(state.car.turn < 0.1 && state.car.turn > -0.1) {
+                                                    state.car.turn = 0;
+                                                  }
 
-                                              if(state.car.dir < 0) {
-                                                state.car.dir = (360 - state.car.dir);
-                                              } else if (state.car.dir > 360) {
-                                                state.car.dir = 360 - state.car.dir;
-                                              }
-                                            }
+                                                  calcPosition();
+                                                }
 
-                                            if(state.car.turn < 0.1 && state.car.turn > -0.1) {
-                                              state.car.turn = 0;
-                                            }
+                                                function calcPosition() {
+                                                  var dirRadian = state.car.dir * (Math.PI/180);
+                                                  state.car.x += state.car.speed * Math.sin(dirRadian);
+                                                  state.car.y += state.car.speed * Math.cos(dirRadian);
+                                                }
 
-                                            calcPosition();
-                                          }
+                                                function animLoop() {
+                                                  setTimeout(function() {
+                                                    calcMovement();
+                                                    state.car.render(state.transformProperty);
+                                                    requestAnimationFrame(animLoop);
+                                                  }, 100 / state.fps);
+                                                }
 
-                                          function calcPosition() {
-                                            var dirRadian = state.car.dir * (Math.PI/180);
-                                            state.car.x += state.car.speed * Math.sin(dirRadian);
-                                            state.car.y += state.car.speed * Math.cos(dirRadian);
-                                          }
+                                                function keyUp(e) {
+                                                  move(e, false);
+                                                }
 
-                                          function animLoop() {
-                                            setTimeout(function() {
-                                              calcMovement();
-                                              state.car.render(state.transformProperty);
-                                              requestAnimationFrame(animLoop);
-                                            }, 100 / state.fps);
-                                          }
+                                                function keyDown(e) {
+                                                  move(e, true);
+                                                }
 
-                                          function keyUp(e) {
-                                            move(e, false);
-                                          }
+                                                function move(e, isKeyDown) {
+                                                  if(e.keyCode >= 37 && e.keyCode <= 40) {
+                                                    e.preventDefault();
+                                                  }
 
-                                          function keyDown(e) {
-                                            move(e, true);
-                                          }
+                                                  if(e.keyCode === 37) {
+                                                    state.keypress.left = isKeyDown;
+                                                  }
 
-                                          function move(e, isKeyDown) {
-                                            if(e.keyCode >= 37 && e.keyCode <= 40) {
-                                              e.preventDefault();
-                                            }
+                                                  if(e.keyCode === 38) {
+                                                    state.keypress.up = isKeyDown;
+                                                  }
 
-                                            if(e.keyCode === 37) {
-                                              state.keypress.left = isKeyDown;
-                                            }
+                                                  if(e.keyCode === 39) {
+                                                    state.keypress.right = isKeyDown;
+                                                  }
 
-                                            if(e.keyCode === 38) {
-                                              state.keypress.up = isKeyDown;
-                                            }
+                                                  if(e.keyCode === 40) {
+                                                    state.keypress.down = isKeyDown;
+                                                  }
+                                                }
 
-                                            if(e.keyCode === 39) {
-                                              state.keypress.right = isKeyDown;
-                                            }
+                                                function camera(el) {
+                                                  document.documentElement.setAttribute('class', el.getAttribute('class'));
+                                                }
 
-                                            if(e.keyCode === 40) {
-                                              state.keypress.down = isKeyDown;
-                                            }
-                                          }
+                                                window.drive = {
+                                              		init: init,
+                                                  camera: camera
+                                              	}
+                                              })();
 
-                                          function camera(el) {
-                                            document.documentElement.setAttribute('class', el.getAttribute('class'));
-                                          }
-
-                                          window.drive = {
-                                        		init: init,
-                                            camera: camera
-                                        	}
-                                        })();
-
-                                        drive.init("car");
+                                              drive.init("car");
