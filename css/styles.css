@@ -280,11 +280,11 @@ html.view-side .base {
   float: left;
 }
 
-/*.head-light + .head-light {
+.head-light+.head-light {
   float: right;
 }
 
-.car-top {
+/*.car-top {
   top: 0;
   left: 0;
   height: 100%;
