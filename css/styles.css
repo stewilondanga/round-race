@@ -134,11 +134,11 @@ html.view-side .view-side {
   content: ":";
 }
 
-/*
 .controls a {
   cursor: pointer;
 }
-.controls h2, .controls a {
+
+/*.controls h2, .controls a {
   padding: 0.6em 0.6em;
   margin: 0;
   display: inline-block;
