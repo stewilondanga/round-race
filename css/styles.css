@@ -293,7 +293,7 @@ html.view-side .base {
   transform: translateZ(1vmin) translateY(0.4vmin);
 }
 
-/*.hood {
+.hood {
   bottom: 0;
   left: 0;
   position: absolute;
@@ -304,7 +304,7 @@ html.view-side .base {
   transform: rotateX(-10deg);
 }
 
-.front-shield {
+/*.front-shield {
   background-color: #B4DEDE;
   position: absolute;
   bottom: 100%;
