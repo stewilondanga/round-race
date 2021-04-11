@@ -207,7 +207,7 @@ html.view-side .base {
   transform-style: preserve-3d;
 }
 
-/*.car__base {
+.car__base {
   height: 100%;
   width: 55%;
   background-color: #C81415;
@@ -215,6 +215,7 @@ html.view-side .base {
   margin: 0 auto;
 }
 
+/*
 .wall-container {
   height: 100%;
   width: 100%;
