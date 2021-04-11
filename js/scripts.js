@@ -135,28 +135,28 @@ var navigate = (function() {
       if (e.keyCode === 37) {
         state.keypress.left = isKeyDown;
       }
+
+      if (e.keyCode === 38) {
+        state.keypress.up = isKeyDown;
+      }
       /*
-          if (e.keyCode === 38) {
-            state.keypress.up = isKeyDown;
-          }
+                if (e.keyCode === 39) {
+                  state.keypress.right = isKeyDown;
+                }
 
-          if (e.keyCode === 39) {
-            state.keypress.right = isKeyDown;
-          }
+                if (e.keyCode === 40) {
+                  state.keypress.down = isKeyDown;
+                }
+              }
 
-          if (e.keyCode === 40) {
-            state.keypress.down = isKeyDown;
-          }
-        }
+              function camera(el) {
+                document.documentElement.setAttribute('class', el.getAttribute('class'));
+              }
 
-        function camera(el) {
-          document.documentElement.setAttribute('class', el.getAttribute('class'));
-        }
+              window.drive = {
+                init: init,
+                camera: camera
+              }
+            })();
 
-        window.drive = {
-          init: init,
-          camera: camera
-        }
-      })();
-
-      drive.init("car");
+            drive.init("car");
