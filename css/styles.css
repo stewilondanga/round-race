@@ -261,14 +261,14 @@ html.view-side .base {
   width: 1vmin;
 }
 
-/*
 .tail-light {
   background-color: #F04C36;
   height: 100%;
   width: 20%;
   float: left;
 }
-.tail-light + .tail-light {
+
+/*.tail-light + .tail-light {
   float: right;
 }
 
