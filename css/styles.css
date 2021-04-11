@@ -16,6 +16,10 @@ html.view-side .view-side {
   color: #FFF;
 }
 
+html.view-side .base {
+  transform: rotateX(50deg) translateY(-10%);
+}
+
 .share__icon {
   width: 32px;
   height: 32px;
@@ -190,9 +194,6 @@ html.view-side .view-side {
 }
 
 /*
-html.view-side .base {
-  transform: rotateX(50deg) translateY(-10%);
-}
 
 #car {
   position: absolute;
