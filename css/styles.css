@@ -372,7 +372,7 @@ html.view-side .base {
   margin: 100% 0 345%;
 }
 
-/*#contact h1 {
+#contact h1 {
   font-family: helvetica;
   font-weight: normal;
   text-align: center;
@@ -383,7 +383,7 @@ html.view-side .base {
   margin: 0 auto;
 }
 
-.cal {
+/*.cal {
   display: inline-block;
   background: #ffe;
   color: #555;
