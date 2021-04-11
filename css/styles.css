@@ -304,7 +304,7 @@ html.view-side .base {
   transform: rotateX(-10deg);
 }
 
-/*.front-shield {
+.front-shield {
   background-color: #B4DEDE;
   position: absolute;
   bottom: 100%;
@@ -313,7 +313,8 @@ html.view-side .base {
   transform: rotateX(-20deg);
   transform-origin: 50% 100%;
 }
-.front-shield:after {
+
+/*.front-shield:after {
   background-color: #B4DEDE;
   content: "";
   display: block;
