@@ -372,13 +372,14 @@ html.view-side .base {
   margin: 100% 0 345%;
 }
 
-#contact h1 {
+.containers h1 {
   font-family: helvetica;
   font-weight: normal;
   text-align: center;
   color: #c0c0c0;
   padding-top: 50px;
   padding-bottom: 10px;
+  padding-right: 770px;
   width: 375px;
   margin: 0 auto;
 }
