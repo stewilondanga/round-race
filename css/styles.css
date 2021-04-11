@@ -1,4 +1,4 @@
-body {
+/*body {
   text-align: center;
   font-family: courier;
   background-image: url("../assets/image.jpeg");
@@ -105,6 +105,271 @@ body {
 
 .share-button:hover .share__link:nth-of-type(4) {
   transition-delay: 0.4s;
+}
+
+body {
+  background-color: #000;
+  font-family: "Roboto Condensed", sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  perspective: 200vmin;
+  overflow: hidden;
+}
+
+.controls {
+  background-color: #272930;
+  color: #FFF;
+  position: fixed;
+  bottom: 0;
+  left: calc(50% - 10em);
+  width: 20em;
+  z-index: 2;
+  text-align: center;
+  color: #989AA4;
+  border-radius: 0.2em 0.2em 0 0;
+}
+.controls h2:after {
+  content: ":";
+}
+.controls a {
+  cursor: pointer;
+}
+.controls h2, .controls a {
+  padding: 0.6em 0.6em;
+  margin: 0;
+  display: inline-block;
+  font-size: 1em;
+  font-weight: bold;
+}
+
+html.view-top .view-top,
+html.view-side .view-side {
+  background-color: #1E2025;
+  color: #FFF;
+}
+
+.track {
+  height: 100%;
+  background: #6F5664;
+  border-radius: 50%;
+  box-sizing: border-box;
+  padding: 20%;
+  box-shadow: inset 0 0 0.4em #444;
+}
+
+.track__infield {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  background: linear-gradient(#429C6B 50%, #429463 50%);
+  background-size: 12vmin 12vmin;
+  box-shadow: 0 0 0.4em #444;
+}
+
+.base {
+  width: 80vmin;
+  height: 80vmin;
+  background: linear-gradient(#429C6B 50%, #429463 50%);
+  background-size: 12vmin 12vmin;
+  transform-style: preserve-3d;
+  position: relative;
+  padding: 1em;
+  transition: transform 0.3s;
+}
+.base:after {
+  transform-origin: 0 0;
+  display: block;
+  background-color: #3D1803;
+  content: "";
+  position: absolute;
+  height: 5vmin;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  transform: rotateX(-90deg);
+  z-index: -1;
+}
+
+html.view-side .base {
+  transform: rotateX(50deg) translateY(-10%);
+}
+
+#car {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform-origin: 50% 70%;
+  height: 10%;
+  width: 10%;
+  z-index: 1;
+}
+#car, #car div {
+  transform-style: preserve-3d;
+}
+
+.car__base {
+  height: 100%;
+  width: 55%;
+  background-color: #C81415;
+  position: relative;
+  margin: 0 auto;
+}
+
+.wall-container {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+.wall {
+  background-color: #C81415;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.wall--1 {
+  background-color: #000;
+  transform-origin: 0 0;
+  transform: rotateX(105deg);
+  height: 1vmin;
+  position: relative;
+}
+
+.wall--2 {
+  transform-origin: 100% 0;
+  transform: rotateY(90deg) skewY(-20deg);
+  width: 1vmin;
+  right: 0;
+  left: auto;
+}
+
+.wall--3 {
+  background-color: #000;
+  transform-origin: 100% 100%;
+  transform: rotateX(-110deg);
+  height: 1vmin;
+  bottom: 0;
+  top: auto;
+}
+
+.wall--4 {
+  transform-origin: 0 100%;
+  transform: rotateY(-90deg) skewY(20deg);
+  width: 1vmin;
+}
+
+.tail-light {
+  background-color: #F04C36;
+  height: 100%;
+  width: 20%;
+  float: left;
+}
+.tail-light + .tail-light {
+  float: right;
+}
+
+.head-light {
+  border-radius: 50%;
+  background-color: #FFF;
+  height: 100%;
+  width: 20%;
+  float: left;
+}
+.head-light + .head-light {
+  float: right;
+}
+
+.car-top {
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  transform: translateZ(1vmin) translateY(0.4vmin);
+}
+
+.hood {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  height: 35%;
+  background-color: #C81415;
+  transform-origin: 0 100%;
+  transform: rotateX(-10deg);
+}
+
+.front-shield {
+  background-color: #B4DEDE;
+  position: absolute;
+  bottom: 100%;
+  height: 60%;
+  width: 100%;
+  transform: rotateX(-20deg);
+  transform-origin: 50% 100%;
+}
+.front-shield:after {
+  background-color: #B4DEDE;
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  height: 260%;
+  width: 100%;
+  transform: rotateX(30deg);
+  transform-origin: 50% 100%;
+}
+
+.roof {
+  background-color: #C81415;
+  position: absolute;
+  bottom: 100%;
+  height: 118.8%;
+  width: 100%;
+  transform: rotateX(30deg);
+  transform-origin: 50% 100%;
+}
+
+.rear-shield {
+  background-color: #B4DEDE;
+  position: absolute;
+  bottom: 100%;
+  height: 80%;
+  width: 100%;
+  transform: rotateX(40deg);
+  transform-origin: 50% 100%;
+}
+
+.trunk {
+  background-color: #C81415;
+  position: absolute;
+  bottom: 100%;
+  height: 80%;
+  width: 100%;
+  transform: rotateX(-20deg);
+  transform-origin: 50% 100%;
+}
+
+.wheel {
+  border-radius: 50%;
+  height: 15%;
+  width: 100%;
+  background-color: #000;
+  transform: skewY(-20deg) translateX(-30%);
+}
+
+.wall--2 .wheel {
+  transform: skewY(20deg) translateX(30%);
+}
+
+.wheel--1 {
+  margin: 100% 0 345%;
 }
 
 #contact h1 {
