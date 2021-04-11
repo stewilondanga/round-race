@@ -272,14 +272,15 @@ html.view-side .base {
   float: right;
 }
 
-/*.head-light {
+.head-light {
   border-radius: 50%;
   background-color: #FFF;
   height: 100%;
   width: 20%;
   float: left;
 }
-.head-light + .head-light {
+
+/*.head-light + .head-light {
   float: right;
 }
 
