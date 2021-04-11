@@ -148,15 +148,15 @@ var navigate = (function() {
         state.keypress.down = isKeyDown;
       }
     }
+
+    function camera(el) {
+      document.documentElement.setAttribute('class', el.getAttribute('class'));
+    }
     /*
-                        function camera(el) {
-                          document.documentElement.setAttribute('class', el.getAttribute('class'));
-                        }
+                            window.drive = {
+                              init: init,
+                              camera: camera
+                            }
+                          })();
 
-                        window.drive = {
-                          init: init,
-                          camera: camera
-                        }
-                      })();
-
-                      drive.init("car");
+                          drive.init("car");
