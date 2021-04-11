@@ -10,6 +10,12 @@ body {
   overflow: hidden;
 }
 
+html.view-top .view-top,
+html.view-side .view-side {
+  background-color: #1E2025;
+  color: #FFF;
+}
+
 /*body {
   text-align: center;
   font-family: courier;
@@ -144,12 +150,6 @@ body {
   display: inline-block;
   font-size: 1em;
   font-weight: bold;
-}
-
-html.view-top .view-top,
-html.view-side .view-side {
-  background-color: #1E2025;
-  color: #FFF;
 }
 
 .track {
