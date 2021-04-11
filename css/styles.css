@@ -284,7 +284,7 @@ html.view-side .base {
   float: right;
 }
 
-/*.car-top {
+.car-top {
   top: 0;
   left: 0;
   height: 100%;
@@ -293,7 +293,7 @@ html.view-side .base {
   transform: translateZ(1vmin) translateY(0.4vmin);
 }
 
-.hood {
+/*.hood {
   bottom: 0;
   left: 0;
   position: absolute;
