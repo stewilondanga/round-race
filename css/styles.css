@@ -155,7 +155,7 @@ html.view-side .view-side {
   box-shadow: inset 0 0 0.4em #444;
 }
 
-/*.track__infield {
+.track__infield {
   height: 100%;
   width: 100%;
   border-radius: 50%;
@@ -164,6 +164,7 @@ html.view-side .view-side {
   box-shadow: 0 0 0.4em #444;
 }
 
+/*
 .base {
   width: 80vmin;
   height: 80vmin;
