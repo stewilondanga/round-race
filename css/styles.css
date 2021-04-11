@@ -29,7 +29,6 @@ html.view-side .view-side {
   margin-right: 0px;
 }
 
-/*
 .share-button {
   cursor: pointer;
   display: inline-block;
@@ -45,6 +44,7 @@ html.view-side .view-side {
   perspective: 200px;
 }
 
+/*
 .share-button__back {
   background-color: #368b8b;
   padding: 5px;
