@@ -193,8 +193,6 @@ html.view-side .base {
   z-index: -1;
 }
 
-/*
-
 #car {
   position: absolute;
   top: 0;
@@ -204,7 +202,8 @@ html.view-side .base {
   width: 10%;
   z-index: 1;
 }
-#car, #car div {
+
+/*#car, #car div {
   transform-style: preserve-3d;
 }
 
