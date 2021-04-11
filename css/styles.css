@@ -326,7 +326,7 @@ html.view-side .base {
   transform-origin: 50% 100%;
 }
 
-/*.roof {
+.roof {
   background-color: #C81415;
   position: absolute;
   bottom: 100%;
@@ -336,7 +336,7 @@ html.view-side .base {
   transform-origin: 50% 100%;
 }
 
-.rear-shield {
+/*.rear-shield {
   background-color: #B4DEDE;
   position: absolute;
   bottom: 100%;
