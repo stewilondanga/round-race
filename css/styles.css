@@ -146,7 +146,7 @@ html.view-side .view-side {
   font-weight: bold;
 }
 
-/*.track {
+.track {
   height: 100%;
   background: #6F5664;
   border-radius: 50%;
@@ -155,7 +155,7 @@ html.view-side .view-side {
   box-shadow: inset 0 0 0.4em #444;
 }
 
-.track__infield {
+/*.track__infield {
   height: 100%;
   width: 100%;
   border-radius: 50%;
