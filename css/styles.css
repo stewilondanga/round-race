@@ -203,11 +203,11 @@ html.view-side .base {
   z-index: 1;
 }
 
-/*#car, #car div {
+#car, #car div {
   transform-style: preserve-3d;
 }
 
-.car__base {
+/*.car__base {
   height: 100%;
   width: 55%;
   background-color: #C81415;
