@@ -255,13 +255,13 @@ html.view-side .base {
   top: auto;
 }
 
-/*
 .wall--4 {
   transform-origin: 0 100%;
   transform: rotateY(-90deg) skewY(20deg);
   width: 1vmin;
 }
 
+/*
 .tail-light {
   background-color: #F04C36;
   height: 100%;
