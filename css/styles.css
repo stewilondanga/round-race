@@ -356,7 +356,7 @@ html.view-side .base {
   transform-origin: 50% 100%;
 }
 
-/*.wheel {
+.wheel {
   border-radius: 50%;
   height: 15%;
   width: 100%;
@@ -364,7 +364,7 @@ html.view-side .base {
   transform: skewY(-20deg) translateX(-30%);
 }
 
-.wall--2 .wheel {
+/*.wall--2 .wheel {
   transform: skewY(20deg) translateX(30%);
 }
 
