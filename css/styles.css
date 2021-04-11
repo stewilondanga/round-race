@@ -246,7 +246,6 @@ html.view-side .base {
   left: auto;
 }
 
-/*
 .wall--3 {
   background-color: #000;
   transform-origin: 100% 100%;
@@ -256,6 +255,7 @@ html.view-side .base {
   top: auto;
 }
 
+/*
 .wall--4 {
   transform-origin: 0 100%;
   transform: rotateY(-90deg) skewY(20deg);
