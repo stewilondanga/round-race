@@ -104,59 +104,59 @@ var navigate = (function() {
 
       calcPosition();
     }
+
+    function calcPosition() {
+      var dirRadian = state.car.dir * (Math.PI / 180);
+      state.car.x += state.car.speed * Math.sin(dirRadian);
+      state.car.y += state.car.speed * Math.cos(dirRadian);
+    }
     /*
-            function calcPosition() {
-              var dirRadian = state.car.dir * (Math.PI / 180);
-              state.car.x += state.car.speed * Math.sin(dirRadian);
-              state.car.y += state.car.speed * Math.cos(dirRadian);
-            }
+                function animLoop() {
+                  setTimeout(function() {
+                    calcMovement();
+                    state.car.render(state.transformProperty);
+                    requestAnimationFrame(animLoop);
+                  }, 100 / state.fps);
+                }
 
-            function animLoop() {
-              setTimeout(function() {
-                calcMovement();
-                state.car.render(state.transformProperty);
-                requestAnimationFrame(animLoop);
-              }, 100 / state.fps);
-            }
+                function keyUp(e) {
+                  move(e, false);
+                }
 
-            function keyUp(e) {
-              move(e, false);
-            }
+                function keyDown(e) {
+                  move(e, true);
+                }
 
-            function keyDown(e) {
-              move(e, true);
-            }
+                function move(e, isKeyDown) {
+                  if (e.keyCode >= 37 && e.keyCode <= 40) {
+                    e.preventDefault();
+                  }
 
-            function move(e, isKeyDown) {
-              if (e.keyCode >= 37 && e.keyCode <= 40) {
-                e.preventDefault();
-              }
+                  if (e.keyCode === 37) {
+                    state.keypress.left = isKeyDown;
+                  }
 
-              if (e.keyCode === 37) {
-                state.keypress.left = isKeyDown;
-              }
+                  if (e.keyCode === 38) {
+                    state.keypress.up = isKeyDown;
+                  }
 
-              if (e.keyCode === 38) {
-                state.keypress.up = isKeyDown;
-              }
+                  if (e.keyCode === 39) {
+                    state.keypress.right = isKeyDown;
+                  }
 
-              if (e.keyCode === 39) {
-                state.keypress.right = isKeyDown;
-              }
+                  if (e.keyCode === 40) {
+                    state.keypress.down = isKeyDown;
+                  }
+                }
 
-              if (e.keyCode === 40) {
-                state.keypress.down = isKeyDown;
-              }
-            }
+                function camera(el) {
+                  document.documentElement.setAttribute('class', el.getAttribute('class'));
+                }
 
-            function camera(el) {
-              document.documentElement.setAttribute('class', el.getAttribute('class'));
-            }
+                window.drive = {
+                  init: init,
+                  camera: camera
+                }
+              })();
 
-            window.drive = {
-              init: init,
-              camera: camera
-            }
-          })();
-
-          drive.init("car");
+              drive.init("car");
