@@ -16,8 +16,6 @@ html.view-side .view-side {
   color: #FFF;
 }
 
-/*
-
 .share__icon {
   width: 32px;
   height: 32px;
@@ -27,6 +25,7 @@ html.view-side .view-side {
   margin-right: 3px;
 }
 
+/*
 .share__icon:last-of-type {
   margin-right: 0px;
 }
