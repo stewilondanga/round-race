@@ -175,7 +175,6 @@ html.view-side .view-side {
   transition: transform 0.3s;
 }
 
-/*
 .base:after {
   transform-origin: 0 0;
   display: block;
@@ -190,6 +189,7 @@ html.view-side .view-side {
   z-index: -1;
 }
 
+/*
 html.view-side .base {
   transform: rotateX(50deg) translateY(-10%);
 }
